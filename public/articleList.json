@@ -43,5 +43,14 @@
     "date": "2026-01-20",
     "thumbnail": "images/placeholder.jpg",
     "htmlFile": "articles/article-005.html"
+  },
+  {
+    "id": "article-006",
+    "categoryId": "chuan-xi",
+    "title": "來到kakita'an",
+    "content": "在學習傳統阿美陶的旅途中，我們第一站來到了kakita'an。",
+    "date": "2026-03-01",
+    "thumbnail": "images/article-006-cover.jpg",
+    "htmlFile": "articles/article-006.html"
   }
 ]
