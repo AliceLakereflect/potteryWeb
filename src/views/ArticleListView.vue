@@ -17,7 +17,9 @@ const currentCategory = computed(() =>
 )
 
 const filteredArticles = computed(() =>
-  allArticles.value.filter((a) => a.categoryId === categoryId.value)
+  allArticles.value
+    .filter((a) => a.categoryId === categoryId.value)
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
 )
 
 const totalPages = computed(() =>
