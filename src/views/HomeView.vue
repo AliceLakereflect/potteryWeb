@@ -5,6 +5,7 @@ import CategoryCard from '../components/CategoryCard.vue'
 
 const router = useRouter()
 const categories = ref([])
+const baseUrl = import.meta.env.BASE_URL
 
 onMounted(async () => {
   try {
@@ -23,7 +24,7 @@ function goToCategory(id) {
 <template>
   <!-- Hero 大圖區 -->
   <section class="hero">
-    <img src="/images/hero.jpg" alt="土手製陶 Hero" class="hero-img" />
+    <img :src="baseUrl + 'images/hero.jpg'" alt="土手製陶 Hero" class="hero-img" />
   </section>
 
   <!-- 分類卡片區 -->

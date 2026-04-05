@@ -5,6 +5,8 @@ defineProps({
     required: true,
   },
 })
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -12,7 +14,7 @@ defineProps({
     <div class="cat-icon">
       <img
         v-if="category.iconUrl"
-        :src="category.iconUrl"
+        :src="baseUrl + category.iconUrl"
         :alt="category.name"
         class="cat-icon-img"
       />

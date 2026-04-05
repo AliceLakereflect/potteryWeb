@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 const categories = ref([])
+const baseUrl = import.meta.env.BASE_URL
 
 onMounted(async () => {
   try {
@@ -22,7 +23,7 @@ function goToCategory(id) {
 <template>
   <nav class="navbar">
     <RouterLink to="/" class="navbar-brand">
-      <img src="/images/logo.jpg" class="logo-icon" alt="土手製陶 Logo" />
+      <img :src="baseUrl + 'images/logo.jpg'" class="logo-icon" alt="土手製陶 Logo" />
       <span class="brand-name">土手製陶</span>
     </RouterLink>
 

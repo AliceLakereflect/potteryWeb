@@ -6,6 +6,8 @@ defineProps({
   },
 })
 
+const baseUrl = import.meta.env.BASE_URL
+
 function formatDate(dateStr) {
   if (!dateStr) return ''
   const d = new Date(dateStr)
@@ -21,7 +23,7 @@ function truncate(text, len = 100) {
 }
 
 function readMore(htmlFile) {
-  window.location.href = htmlFile
+  window.location.href = baseUrl + htmlFile
 }
 </script>
 
@@ -30,8 +32,8 @@ function readMore(htmlFile) {
     <!-- 縮圖 -->
     <div class="card-thumbnail">
       <img
-        v-if="article.thumbnail && article.thumbnail !== '/images/placeholder.jpg'"
-        :src="article.thumbnail"
+        v-if="article.thumbnail && !article.thumbnail.includes('placeholder')"
+        :src="baseUrl + article.thumbnail"
         :alt="article.title"
       />
       <div v-else class="thumbnail-placeholder">
