@@ -7,7 +7,7 @@ const categories = ref([])
 
 onMounted(async () => {
   try {
-    const res = await fetch('/category.json')
+    const res = await fetch(import.meta.env.BASE_URL + 'category.json')
     categories.value = await res.json()
   } catch (e) {
     console.error('無法載入分類', e)

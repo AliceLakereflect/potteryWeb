@@ -36,8 +36,8 @@ watch(categoryId, () => {
 onMounted(async () => {
   try {
     const [artRes, catRes] = await Promise.all([
-      fetch('/articleList.json'),
-      fetch('/category.json'),
+      fetch(import.meta.env.BASE_URL + 'articleList.json'),
+      fetch(import.meta.env.BASE_URL + 'category.json'),
     ])
     allArticles.value = await artRes.json()
     categories.value = await catRes.json()
